@@ -4,7 +4,7 @@ This not only allows you to preload apps to RAM but to also copy entire folders 
 The changes made to folders copied to RAM are restored to disk upon shutdown.
 
 Steps to preload an app to RAM:
-- create the "services" folder.
+- Create the "services" folder.
 - Create a file with a name that doesn't colide with any service, the filename is going to be used as the service name.
 - Create a file with the following arrays:
   - For copying something to RAM, you need the variables DISKDIRS, RAMDIRS and BACKUPDIRS.

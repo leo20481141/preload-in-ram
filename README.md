@@ -1,5 +1,4 @@
 # Preload In RAM
-
 Preload apps and files to ram so when you open them, they are ready to use inmediately.
 This not only allows you to preload apps to RAM but to also copy entire folders to RAM. This makes a significant difference in some app's performance.
 The changes made to folders copied to RAM are restored to disk upon shutdown.

@@ -9,7 +9,10 @@ Steps to preload an app to RAM:
 - Create a file with the following arrays:
   - For copying something to RAM, you need the variables DISKDIRS, RAMDIRS and BACKUPDIRS.
   - For preloading something, you need the variable PRELOAD_DIRS.
-- Keep in mind that the service files are just copy-pasted into a bash script, so bash code is also valid.
+- Save the services running "save.sh".
+
+NOTE: Keep in mind that the service files are just copy-pasted into a bash script, so bash code is also valid.
+NOTE: if you change the name of the service, you will have to delete the previous service yourself. Just delete /etc/systemd/system/<service>.service and /usr/local/bin/<service>.sh
 
 How it works:
 - At boot time, the specified folders are loaded into RAM.

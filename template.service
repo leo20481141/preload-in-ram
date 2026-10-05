@@ -1,0 +1,17 @@
+[Unit]
+Description=Saves files to ram at boot and restores them to disk at shutdown
+Before=multi-user.target graphical.target  display-manager.service
+Requires=local-fs.target remote-fs.target
+Conflicts=shutdown.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+Restart=no
+ExecStart=/usr/local/bin/<<NAME>>.sh sync-to-ram
+ExecStop=/usr/local/bin/<<NAME>>.sh sync-to-disk
+TimeoutStartSec=infinity
+TimeoutStopSec=infinity
+
+[Install]
+WantedBy=multi-user.target

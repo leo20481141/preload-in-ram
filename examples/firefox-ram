@@ -1,0 +1,21 @@
+DISKDIRS=(
+	/home/leo/.config/mozilla/firefox
+	/home/leo/.cache/mozilla/firefox
+	/home/leo/.local/share/mozilla/firefox
+)
+
+RAMDIRS=(
+	"${RAMDISK}/mozilla/firefox/config"
+	"${RAMDISK}/mozilla/firefox/cache"
+	"${RAMDISK}/mozilla/firefox/data"
+)
+
+BACKUPDIRS=()
+
+for DISKDIR in "${DISKDIRS[@]}"; do
+	BACKUPDIRS+=("${DISKDIR}-backup")
+done
+
+PRELOAD_DIRS=(
+	/usr/lib/firefox
+)

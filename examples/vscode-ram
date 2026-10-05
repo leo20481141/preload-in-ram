@@ -1,0 +1,19 @@
+DISKDIRS=(
+	"/home/leo/.config/Code"
+	"/home/leo/.vscode"
+)
+
+RAMDIRS=(
+	"${RAMDISK}/vscode/config"
+	"${RAMDISK}/vscode/.vscode"
+)
+
+BACKUPDIRS=()
+
+for DISKDIR in "${DISKDIRS[@]}"; do
+	BACKUPDIRS+=("${DISKDIR}-backup")
+done
+
+PRELOAD_DIRS=(
+	"/usr/share/code"
+)
